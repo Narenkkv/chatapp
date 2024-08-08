@@ -1,0 +1,70 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+
+.chat_container::-webkit-scrollbar {
+  display: none;
+}
+
+.chat_container {
+  overflow-y: scroll;
+  overflow-x: hidden;
+  flex-direction: column;
+  height: 300px; 
+  background-color: #e0f396; 
+}
+
+#Others{
+  @apply flex flex-col items-start
+}
+#you{
+  @apply flex flex-col items-end;
+}
+
+#you .msg_container{
+  margin-left: 16px;
+}
+#Others .msg_container{
+  margin-right:16px
+}
+
+#Others div{
+  background-color: #4299e1;
+  border-bottom-left-radius: 0.75rem;
+  border-top-left-radius: 0.75rem;
+  border-top-left-radius: 0.75rem;
+}
+
+#you div{
+  background-color: #83868993;
+  border-bottom-left-radius: 0.75rem;
+  border-top-left-radius: 0.75rem;
+  border-top-left-radius: 0.75rem;
+}
+
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.hide-scrollbar {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
